@@ -1,0 +1,612 @@
+/* Navbar Styles */
+.bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  width: 100%;
+  height: 110px;
+  padding: 10px 0;
+  background-color: #f8f9fa;
+  /* Light gray background for better contrast */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Soft shadow for depth */
+  color: #343a40;
+  /* Darker text for good readability */
+  flex-wrap: nowrap;
+}
+
+.step1 {
+  color: #1f1f1f;
+  font-family: Nunito Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  line-height: 1.5;
+  font-size: 16px;
+  background-color: #f0f3f5;
+}
+
+.step2 {
+
+  color: #1f1f1f;
+  font-family: Nunito Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  line-height: 1.5;
+  font-size: 16px
+}
+
+.step3 {
+  max-width: 960px;
+  width: 100%;
+  margin-left: auto;
+  box-sizing: border-box;
+  margin-right: auto;
+  display: block;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #1f1f1f;
+  font-family: Nunito Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.step4 {
+  list-style: none;
+  margin: 0px;
+  display: flex;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  unicode-bidi: isolate;
+  color: #1f1f1f;
+  font-family: Nunito Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  line-height: 1.5;
+
+}
+
+/* Step Numbers Container */
+.step-numbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  /* Even spacing between step numbers */
+
+}
+
+.navbar1 {
+  display: flex;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 5px 30px;
+
+  color: #0e0d0d;
+
+
+}
+
+/* Step Number Styling */
+.step-number {
+  font-size: 18px;
+  /* Default font size for step number */
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+.step-number.active {
+  background-color: #007bff;
+  /* Blue background for the active step */
+  color: #fff;
+  /* White text, including the tick */
+  border-color: #007bff;
+}
+
+.step-number::before {
+  font-size: 12px;
+  /* Reduce font size for the tick */
+}
+
+.step-number.completed {
+  background-color: #28a745;
+  /* Green background for completed sections */
+  color: #fff;
+  /* White text for the tick */
+  font-size: 12px;
+  /* Smaller font size for the tick */
+}
+
+.step-number {
+  width: 40px;
+  /* Larger size for better visibility */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  /* Round shape */
+  background-color: #e9ecef;
+  /* Neutral gray background */
+  color: whitesmoke;
+  /* Dark gray for numbers */
+  font-weight: bold;
+  /* Bold font for emphasis */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* Smooth transition for hover and active states */
+  border: 2px solid transparent;
+  /* Default border */
+}
+
+/* Hover Effect */
+.step-number:hover {
+  background-color: #0d6efd;
+  /* Blue on hover */
+  color: white;
+  border: 2px solid #0a58ca;
+  /* Slightly darker border */
+}
+
+/* Active Step Number */
+.step-number.active {
+  background-color: #0d6efd;
+  /* Primary blue */
+  color: white;
+  border: 2px solid #0a58ca;
+  /* Slightly darker border for focus */
+}
+
+/* Step Text */
+.step-text {
+  font-size: 0.75rem;
+  /* Standard font size */
+  font-weight: 500;
+  text-align: center;
+  color: #080909;
+  /* Medium gray for text */
+  opacity: 0.9;
+  transition: opacity 0.3s ease, color 0.3s ease;
+  margin-top: 8px;
+  /* Add spacing below the number */
+}
+
+/* Active Step Text */
+.step-text.active-text {
+  color: #0b0c0d;
+  /* Blue for active step text */
+  font-weight: bold;
+}
+
+/* Step Container */
+.step-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-container {
+  position: absolute;
+  right: 20px;
+  
+}
+
+.dropdown-toggle {
+  background-color: transparent;
+  border: none;
+  font-size: 20px; /* Icon size */
+  cursor: pointer;
+  color: white; /* Icon color */
+}
+.logo1{
+   /* Subtle shadow for emphasis */
+   right: 50%;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.logo2{
+  /* Larger logo size */
+  font-weight: 700;           /* Bold font weight */
+  color: #080808; /* Accent color for the logo */
+  text-transform: uppercase;  /* Uppercase letters for a sleek look */
+  letter-spacing: 2px;        /* Spacing between letters for a modern feel */
+  font-family: 'Poppins', sans-serif; /* Stylish, modern font family */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4); /* Subtle shadow for emphasis */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #3b3838;
+  width: 150px;
+  height: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  padding: 10px 0;
+}
+
+.dropdown-item {
+  padding: 8px 0px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+
+
+
+
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 991px) {
+  .bar {
+    padding: 10px 15px;
+    height: 90px;
+    /* Reduced height for smaller screens */
+  }
+
+  .step-numbers {
+    gap: 20px;
+    /* Reduced gap for compact layout */
+    padding: 5px 0;
+  }
+
+  .step-number {
+    width: 30px;
+    /* Adjusted size for smaller screens */
+    height: 30px;
+  }
+
+  .step-text {
+    font-size: 0.85rem;
+    /* Smaller text size */
+  }
+}
+
+/* Additional Styling for Navbar Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0d6efd;
+  /* Highlight color for logo */
+  margin-right: auto;
+  margin-left: 20px;
+  /* Align logo to the left */
+}
+
+/* Disabled Logo */
+.logo.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+/* Navbar Shadow */
+.bar {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* Soft shadow for floating effect */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  /* Space between elements */
+  align-items: center;
+  /* Align items vertically */
+  
+  background-color: #f8f9fa;
+  /* Adjust as needed */
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.step-numbers {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  /* Ensures it takes up available space in the center */
+  gap: 30px;
+  /* Space between steps */
+}
+
+.step-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  appearance: none;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  min-width: 64px;
+  color: rgb(72, 119, 153);
+  text-transform: none;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 600;
+  box-shadow: none;
+  width: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  outline: 0px;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+  margin: 0px;
+  text-decoration: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 3px;
+}
+
+.step-number {
+  font-size: 0.5rem;
+  stroke-width: 2;
+  stroke: rgb(250, 250, 250);
+  margin-bottom: 2px;
+  font-size: 10px;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #487799;
+  border-radius: 50%;
+  background-color: #487799;
+  transition: 0.3s;
+}
+
+.step-number.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.step-text {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.dropdown-container {
+  position: relative;
+  margin-left: 50%;
+  position: relative;
+}
+
+.dropdown-toggle {
+  font-size: 18px;
+  cursor: pointer;
+  background: none; /* No background */
+  border: none; /* No border */
+  font-size: 20px; /* Adjust font size for dropdown icon */
+  cursor: pointer;
+
+
+  background: none;
+  border: none;
+}
+
+.dropdown-menu {
+  position: absolute;
+
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  min-width: 150px;
+}
+
+.dropdown-item {
+  
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+
+
+.bar-line {
+  width: 100%;
+  height: 4px;
+  background-color: #487799;
+  display: flex;
+  justify-content: space-between;
+  
+  /* Height of the bar line */
+  background-color: #e0e0e0;
+  /* Default background for incomplete steps */
+  border-radius: 4px;
+  overflow: hidden;
+  /* Light gray line */
+  /* Space above the line */
+
+}
+.bar-step {
+  flex: 1;
+  /* Each step takes an equal amount of space */
+  background-color: #c7d2da;
+  /* Default color for incomplete steps */
+  transition: background-color 0.3s ease;
+}
+
+/* Completed steps */
+.bar-step.completed {
+  background-color: #487799;
+  /* Green for completed steps */
+}
+.logo1{
+  color: red;
+  right: 50%;
+}
+/* General Responsive Styling */
+@media (max-width: 1200px) {
+  .bar {
+    height: 100px;
+    padding: 10px 20px;
+  }
+
+  .step-numbers {
+    gap: 25px;
+  }
+
+  .step-number {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .step-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .bar {
+    height: 90px;
+    padding: 10px 15px;
+  }
+
+  .step-numbers {
+    gap: 20px;
+    padding: 5px 0;
+  }
+
+  .step-number {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .step-text {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .bar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .step-numbers {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .step-number {
+    width: 28px;
+    height: 28px;
+    font-size: 11px;
+  }
+
+  .step-text {
+    font-size: 0.8rem;
+  }
+
+  .navbar-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dropdown-container {
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .bar {
+    padding: 5px 10px;
+  }
+
+  .step-number {
+    width: 25px;
+    height: 25px;
+    font-size: 10px;
+  }
+
+  .step-text {
+    font-size: 0.75rem;
+  }
+
+  .dropdown-menu {
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 375px) {
+  .step-number {
+    width: 22px;
+    height: 22px;
+    font-size: 9px;
+  }
+
+  .step-text {
+    font-size: 0.7rem;
+  }
+
+  .logo1,
+  .logo2 {
+    font-size: 1.2rem;
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 1201px) {
+  .bar {
+    height: 110px;
+    padding: 10px 30px;
+  }
+
+  .step-numbers {
+    gap: 30px;
+  }
+
+  .step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .step-text {
+    font-size: 1rem;
+  }
+
+  .dropdown-menu {
+    min-width: 150px;
+  }
+}

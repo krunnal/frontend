@@ -1,0 +1,216 @@
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    /* Make sure modal is on top */
+}
+
+/* Modal Box */
+.modal {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    /* Default width for modal */
+    max-width: 90%;
+    /* Ensure modal is responsive on small screens */
+    max-height: 80vh;
+    /* Limit the modal's height to 80% of the viewport height */
+    overflow-y: auto;
+    /* Enable vertical scrolling if content exceeds the max height */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Shadow for depth */
+}
+
+
+/* Modal Header */
+h2 {
+    margin: 0 0 15px;
+    font-size: 1.25rem;
+}
+
+/* Label Styles */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 1rem;
+    /* Consistent font size */
+}
+
+/* Input Styles */
+input {
+    width: 100%;
+    /* Full width inputs */
+    padding: 10px;
+    border: 1px solid #ccc;
+    /* Border for inputs */
+    border-radius: 4px;
+    /* Rounded corners */
+    box-sizing: border-box;
+    /* Include padding and border in total width */
+    /* font-size: 1rem; */
+}
+
+/* Error Message Styles */
+.error {
+    color: red;
+    /* Red color for error messages */
+    font-size: 0.9rem;
+    /* Smaller font size */
+    margin-top: 5px;
+    /* Space above error message */
+}
+
+/* Button Styles */
+
+
+button:hover {
+    /* background-color: #4c5157;
+    /* Darker blue on hover */
+    /* color: #ccc; */ 
+}
+
+/* Cancel Button Style */
+
+button:last-of-type:hover {
+    /* background-color: #575454; */
+    /* Darker red on hover */
+}
+
+/* Close Button (X) */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.close-btn {
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #f00;
+    /* Red color on hover */
+}
+
+/* Media Queries for Mobile & Tablet Responsiveness */
+
+/* Tablet (screens between 768px and 1024px) */
+@media (max-width: 1024px) {
+    .modal {
+        width: 80%;
+        /* Reduced width on tablet */
+    }
+
+    button {
+        width: 100%;
+        /* Full-width buttons on tablets */
+        margin-right: 0;
+        /* Remove space between buttons */
+        margin-bottom: 10px;
+        /* Space between stacked buttons */
+    }
+}
+
+/* Mobile (screens less than 768px) */
+@media (max-width: 768px) {
+    .modal {
+        width: 90%;
+        /* Full-width modal on mobile */
+        padding: 15px;
+        /* Adjust padding for mobile */
+    }
+
+    button {
+        width: 100%;
+        /* Full-width buttons on mobile */
+        margin-right: 0;
+        /* Remove margin between buttons */
+        margin-bottom: 10px;
+        /* Space between stacked buttons */
+    }
+
+    /* Modal Header - Adjust Heading Font Size */
+    h2 {
+        font-size: 1.1rem;
+        /* Smaller heading size on mobile */
+    }
+
+    /* Label Styling */
+    label {
+        font-size: 0.9rem;
+        /* Smaller label text on mobile */
+    }
+
+    /* Input Field Font Size */
+    input {
+        font-size: 0.9rem;
+        /* Smaller input text on mobile */
+        padding: 8px;
+        /* Reduced padding for smaller screens */
+    }
+}
+
+.save-nominee1 {
+    background-color: #0000;
+    background-color: #487799;
+    border: 1px solid #487799;
+    border-radius: .1875rem;
+    box-sizing: border-box;
+    color: #1f1f1f;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+
+    line-height: 1;
+    padding: .75rem 1.5rem;
+
+    text-decoration: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    -webkit-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+    margin-left: 50px;
+}
+
+.cancel-button {
+    /* Absolutely positioned relative to parent */
+    bottom: 10px;
+    /* Distance from the bottom */
+    left: 10px;
+    /* Distance from the left */
+    background-color: #d0d2d4;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #0000;
+    border: 1px solid #717070;
+    border-radius: .1875rem;
+    box-sizing: border-box;
+    color: #1f1f1f;
+    color: #717070;
+    cursor: pointer;
+    display: inline-block;
+   
+    line-height: 1;
+    padding: .75rem 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    -webkit-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+}

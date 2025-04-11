@@ -1,0 +1,784 @@
+/* General Styles */
+:root {
+  --primary-bg: #2C2C2C;
+  /* Dark background color */
+  --secondary-bg: #333;
+  /* Sidebar and navbar background */
+  --accent-color: #5A9BD5;
+  /* Blue accent color */
+  --highlight-color: #FFCC00;
+  /* Yellow highlight */
+  --text-light: #F1F1F1;
+  /* Light text for readability */
+  --font-family: 'Roboto', sans-serif;
+  /* Modern font family */
+}
+
+/* Global Styles */
+body,
+html {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  overflow: hidden;
+  /* Prevent scrolling */
+  height: 100%;
+  /* Ensure full height of the page */
+}
+
+/* Navbar and Sidebar Common Styles */
+.navbar,
+.sidebar {
+  background-color: var(--secondary-bga);
+  /* Consistent dark background */
+  color: var(--text-light);
+  /* White text */
+  padding: 15px 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+
+/* Navbar Styles */
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  /* Sticks to the top once it's scrolled to the top */
+  width: 100%;
+  z-index: 100;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  padding: 3px 5px;
+  background-color: var(--secondary-bg);
+  color: black;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  /* Optional box shadow */
+}
+
+/* Navbar Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 25px;
+  align-items: center;
+  flex-direction: row;
+  /* Display links in a row */
+  flex-grow: 1;
+  /* Make links take the full available width */
+  justify-content: center;
+  /* Center the links horizontally */
+}
+
+/* Navbar Links Styling */
+.nav-links li {
+  display: flex;
+  flex-direction: row;
+  /* Align items in a row */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.8;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent-color);
+  /* Highlight on hover */
+  opacity: 1;
+}
+
+.active-link {
+  color: var(--highlight-color);
+  /* Active link color */
+  font-weight: bold;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .navbar {
+    height: 80px;
+    /* Reduced height on smaller screens */
+    padding: 10px 15px;
+    /* Reduced padding */
+  }
+
+  .nav-links {
+    gap: 15px;
+    /* Less space between links on smaller screens */
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+    /* Slightly smaller font size */
+  }
+}
+
+/* Logout Link Styles */
+.nav-icons {
+  display: flex;
+  justify-content: flex-end;
+  /* Align the logout link to the right */
+  margin: 10px;
+  gap: 40px
+}
+
+/* Logout Button */
+#logoutLink {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: var(--accent-color);
+  /* Default background color */
+  color: var(--text-light);
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  /* Smooth transition for background and scaling */
+}
+
+#logoutLink i {
+  margin-right: 10px;
+  /* Space between icon and text */
+  font-size: 1.2rem;
+  /* Adjust the icon size */
+}
+
+#logoutLink:hover {
+  background-color: var(--highlight-color);
+  /* Change background color on hover */
+  transform: scale(1.05);
+  /* Slightly enlarge the button */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  /* Add shadow for depth */
+}
+
+#logoutLink:focus {
+  outline: none;
+  box-shadow: 0 0 5px 2px var(--highlight-color);
+  /* Highlight the button with a border */
+}
+
+#logoutLink:active {
+  animation: ripple 0.4s linear;
+  /* Trigger ripple effect when clicked */
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Navbar Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-links li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.8;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent-color);
+  /* Highlight on hover */
+  opacity: 1;
+}
+
+.active-link {
+  color: var(--highlight-color);
+  /* Active link color */
+  font-weight: bold;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 60px;
+  /* Adjust for the navbar height */
+  left: 0;
+  width: 150px;
+  /* Narrower sidebar width */
+  height: calc(100vh - 70px);
+  /* Full height minus navbar */
+  background-color: var(--secondary-bg);
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Sidebar Links */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar li:hover {
+  background-color: var(--accent-color);
+  /* Hover color effect */
+}
+
+.sidebar a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: var(--text-light);
+  /* Light color on hover */
+}
+
+/* Main Content Styles */
+.content-wrapper {
+  display: flex;
+
+  /* Offset navbar height */
+  /* height: 200vh; */
+}
+
+/* Main Content Styles (For Regular Pages) */
+.main-content {
+  /* Increased for better spacing */
+
+  background-color: white;
+  flex: 1;
+  /* height: calc(100vh - 60px); */
+  /* Adjusted for navbar height */
+
+}
+
+/* Static Page Styles */
+.static-page-wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  margin-right: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.static-page-wrapper .main-content {
+  margin: auto;
+
+  height: 100vh;
+  /* Full height */
+  background-color: #fff;
+  overflow: auto;
+}
+
+/* Hide Sidebar and Navbar on Static Pages */
+.static-page-wrapper .navbar,
+.static-page-wrapper .sidebar {
+  display: none;
+}
+
+/* Sidebar Responsiveness */
+@media (max-width: 768px) {
+  .sidebar {
+    position: absolute;
+    top: 60px;
+    /* Adjusted to navbar height */
+    width: 100%;
+    height: calc(100vh - 60px);
+    /* Full height minus navbar */
+    background-color: var(--secondary-bg);
+    padding: 15px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    /* Optional shadow for mobile */
+  }
+
+  .main-content {
+    margin-left: 0;
+    margin-top: 100px;
+    /* Adjusted for mobile */
+  }
+}
+
+/* Mobile Responsive Improvements */
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100%;
+    height: 100vh;
+    top: 60px;
+    /* Adjusted navbar height */
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+}
+
+/* Active Link Styling for React Router */
+.nav-links a.active {
+  color: var(--highlight-color);
+  /* Active link color */
+  font-weight: bold;
+}
+
+/* Add smooth transition for active link */
+.nav-links a {
+  transition: all 0.3s ease;
+}
+
+:root {
+  --dl-color-gray-500: #595959;
+  --dl-color-gray-700: #999999;
+  --dl-color-gray-900: #D9D9D9;
+  --dl-size-size-large: 144px;
+  --dl-size-size-small: 48px;
+  --dl-color-danger-300: #A22020;
+  --dl-color-danger-500: #BF2626;
+  --dl-color-danger-700: #E14747;
+  --dl-color-gray-black: #000000;
+  --dl-color-gray-white: #FFFFFF;
+  --dl-size-size-medium: 96px;
+  --dl-size-size-xlarge: 192px;
+  --dl-size-size-xsmall: 16px;
+  --dl-space-space-unit: 16px;
+  --dl-color-primary-100: #003EB3;
+  --dl-color-primary-300: #0074F0;
+  --dl-color-primary-500: #14A9FF;
+  --dl-color-primary-700: #85DCFF;
+  --dl-color-success-300: #199033;
+  --dl-color-success-500: #32A94C;
+  --dl-color-success-700: #4CC366;
+  --dl-size-size-xxlarge: 288px;
+  --dl-size-size-maxwidth: 1400px;
+  --dl-radius-radius-round: 50%;
+  --dl-space-space-halfunit: 8px;
+  --dl-space-space-sixunits: 96px;
+  --dl-space-space-twounits: 32px;
+  --dl-radius-radius-radius2: 2px;
+  --dl-radius-radius-radius4: 4px;
+  --dl-radius-radius-radius8: 8px;
+  --dl-space-space-fiveunits: 80px;
+  --dl-space-space-fourunits: 64px;
+  --dl-space-space-threeunits: 48px;
+  --dl-space-space-oneandhalfunits: 24px;
+}
+
+.button {
+  color: var(--dl-color-gray-black);
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-color: var(--dl-color-gray-black);
+  border-width: 1px;
+  border-radius: 4px;
+  background-color: var(--dl-color-gray-white);
+}
+
+.input {
+  color: var(--dl-color-gray-black);
+  cursor: auto;
+  padding: 0.5rem 1rem;
+  border-color: var(--dl-color-gray-black);
+  border-width: 1px;
+  border-radius: 4px;
+  background-color: var(--dl-color-gray-white);
+}
+
+.textarea {
+  color: var(--dl-color-gray-black);
+  cursor: auto;
+  padding: 0.5rem;
+  border-color: var(--dl-color-gray-black);
+  border-width: 1px;
+  border-radius: 4px;
+  background-color: var(--dl-color-gray-white);
+}
+
+.list {
+  width: 100%;
+  margin: 1em 0px 1em 0px;
+  display: block;
+  padding: 0px 0px 0px 1.5rem;
+  list-style-type: none;
+  list-style-position: outside;
+}
+
+.list-item {
+  display: list-item;
+}
+
+.teleport-show {
+  display: flex !important;
+  transform: none !important;
+}
+
+.link {
+  font-style: normal;
+  transition: 0.3s;
+  font-weight: 500;
+  line-height: 24px;
+  text-decoration: none;
+  color: black;
+}
+
+.link:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.accordion-element {
+  gap: var(--dl-space-space-fiveunits);
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  transition: .5s all linear;
+  ;
+  align-items: flex-start;
+  padding-top: var(--dl-space-space-oneandhalfunits);
+  border-color: #DBDBDB;
+  flex-direction: row;
+  padding-bottom: var(--dl-space-space-oneandhalfunits);
+  justify-content: center;
+  border-bottom-width: 1px;
+}
+
+.accordion-element:hover {
+  fill: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.Question {
+  gap: var(--dl-space-space-unit);
+  width: 100%;
+  display: flex;
+  padding: var(--dl-space-space-fiveunits);
+  max-width: 640px;
+  align-items: flex-start;
+  border-color: #DBDBDB;
+  flex-direction: column;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+}
+
+.active-quote {
+  display: flex !important;
+  align-items: center;
+  flex-direction: column;
+}
+
+.quote {
+  display: none;
+}
+
+.Content {
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 1.15;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.Heading {
+  font-size: 32px;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 1.15;
+  text-transform: none;
+  text-decoration: none;
+}
+
+@media(max-width: 767px) {
+  .Question {
+    gap: var(--dl-space-space-halfunit);
+    padding-top: var(--dl-space-space-oneandhalfunits);
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: var(--dl-space-space-oneandhalfunits);
+    border-right-width: 0px;
+  }
+}
+
+/* Overall navbar styling */
+.navbar {
+  display: flex;
+  position: sticky;
+  top: 0;
+  /* Sticks to the top once it's scrolled to the top */
+  width: 100%;
+  z-index: 100;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+
+  background-color:#1b232d;;
+  color: #0e0d0d;
+
+}
+
+/* Logo styling */
+.logo {
+  font-family: 'Cursive', sans-serif;
+  font-size: 2px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Navigation links styling (no <li> elements, using divs) */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  margin-right:950px
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00bcd4;
+  /* Hover effect for links */
+}
+
+/* Logout link styling */
+.nav-icons a {
+  color: white;
+  /* Red color for logout */
+  text-decoration: none;
+  
+}
+
+.nav-icons a:hover {
+  color: #e57373;
+  /* Hover effect for logout */
+}
+
+/* Add responsiveness for mobile screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 10px;
+  }
+}
+
+.dropdown {
+  position: relative;
+}
+
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  padding: 10px 20px;
+  border-radius: 8px;
+  z-index: 1000;
+ 
+  background: #1b232d;
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.profile-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+
+.profile-name {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.dropdown-divider {
+  border: 0;
+  height: 1px;
+  background-color: #555;
+  margin: 8px 0;
+}
+
+.dropdown-item {
+  display: block;
+  color: #fff;
+  padding: 10px 0;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+
+
+.logout-btn {
+  background-color: #d9534f;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #c9302c;
+}
+.vertical-bar {
+  width: 1px;
+  height: 22px; /* Adjust height as needed */
+  background-color: #696363;
+  margin: 0 10px; /* Space around the bar */
+}
+.dotted-cube {
+  display: grid;
+  grid-template-columns: repeat(3, 7px); /* 3 columns, each square 8px */
+  grid-gap: 3px; /* Space between the squares */
+  justify-content: center; /* Center the cube horizontally */
+  align-items: center; /* Center the cube vertically */
+}
+
+.dot {
+  width: 5px; /* Width of the square */
+  height: 5px; /* Height of the square */
+  background-color: white; /* Color of the square */
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.8); /* Optional: Slight glow for sharpness */
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-item:hover {
+  color: #430ec8; /* Highlight color on hover */
+}
+
+.fas.fa-home {
+  font-size: 18px; /* Icon size */
+}
+.dropdown-item {
+  display: grid;
+  grid-template-columns: 30px auto; /* Smaller gap by reducing icon column width */
+  align-items: center;
+  /* Adjust padding for a compact layout */
+  text-decoration: none;
+  color: #333;
+  font-size: 14px; /* Slightly smaller font size for compactness */
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f7f7f7;
+}
+
+.icon-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-column {
+  margin-left: 5px; /* Reduce space between icon and text */
+}
+
+.logout-btn {
+  display: grid;
+  grid-template-columns: 30px auto; /* Smaller gap for logout button as well */
+  align-items: center;
+  width: 100%;
+  padding: 10px 0px; /* Adjust padding for consistency */
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  font-size: 14px; /* Consistent font size with dropdown items */
+  color:white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  color:#914c4c;
+  background-color: #f7f7f7;
+}
+
+.dropdown-divider {
+  margin: 5px 0; /* Reduce margin for a tighter layout */
+  border-top: 1px solid #ddd;
+}
+@media (max-width: 639px) {
+  .nav-icons {
+    gap: 10px; /* Reduce spacing for smaller screens */
+    margin: 5px; /* Smaller margin for compact view */
+  }
+}
+
+/* Medium devices (tablets, 640px to 767px) */
+@media (min-width: 640px) and (max-width: 767px) {
+  .nav-icons {
+    gap: 20px; /* Adjust spacing for medium devices */
+    margin: 8px; /* Adjust margin for medium view */
+  }
+}
+
+/* Large devices (laptops, 768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .nav-icons {
+    gap: 30px; /* Moderate spacing for large devices */
+    margin: 10px; /* Default margin for larger screens */
+  }
+}

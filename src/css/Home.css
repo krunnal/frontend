@@ -1,0 +1,107 @@
+/* Container for the entire home section */
+.home-container {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Section containing the buttons */
+.button-section {
+    background-color: #a2c3d1; /* Sky blue background */
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    width: 90%; /* Default to full width for smaller screens */
+    max-width: 800px; /* Restrict max width for larger screens */
+    margin: 0 auto; /* Center the section */
+}
+
+.button-section h1 {
+    font-size: 1.5rem; /* Smaller default font size */
+    color: #333;
+}
+
+.button-section p {
+    font-size: 1rem; /* Smaller default font size */
+    color: #555;
+}
+
+/* Container for the buttons inside the button-section */
+.button-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+    justify-content: center;
+    gap: 20px; /* Space between the buttons */
+    margin-top: 20px;
+}
+
+/* Each individual button box */
+.button-box {
+    background-color: #ffffff; /* White background for the button box */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+    cursor: pointer; /* Makes the entire box clickable */
+    text-align: center;
+    font-size: 1rem; /* Smaller font size for smaller screens */
+    color: #080909; /* Blue text color */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    flex: 1 1 100%; /* Full width on small screens */
+    max-width: 200px; /* Restrict size for larger screens */
+}
+
+.button-box:hover {
+    background-color: #66c2ff; /* Darker sky blue on hover */
+}
+
+/* Info section styling */
+.info-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.info-section h2 {
+    font-size: 1.5rem; /* Smaller default font size */
+    color: #333;
+}
+
+.info-section p {
+    font-size: 1rem; /* Smaller default font size */
+    color: #555;
+}
+
+/* Media Queries for Multi-Device Support */
+
+/* Tablets (768px and above) */
+@media (min-width: 768px) {
+    .button-section h1 {
+        font-size: 2rem;
+    }
+
+    .button-section p {
+        font-size: 1.2rem;
+    }
+
+    .button-box {
+        flex: 1 1 calc(50% - 40px); /* Two buttons per row */
+        max-width: 300px;
+    }
+}
+
+/* Laptops and Desktops (1024px and above) */
+@media (min-width: 1024px) {
+    .button-section {
+        width: 800px; /* Fixed width for larger screens */
+    }
+
+    .button-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .button-section p {
+        font-size: 1.5rem;
+    }
+
+    .button-box {
+        flex: 1 1 calc(33.33% - 40px); /* Three buttons per row */
+    }
+}

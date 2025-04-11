@@ -1,0 +1,8 @@
+/* Style the error message */
+.error-text {
+    color: red;
+    font-size: 12px;
+    
+}
+
+/* Highlight the input field with error */

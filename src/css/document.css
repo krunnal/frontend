@@ -1,0 +1,275 @@
+/* document.css */
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.loader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+
+.loader {
+    border: 5px solid #f3f3f3; /* Light grey */
+    border-top: 5px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.no-documents {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.no-documents h3 {
+    color: #888;
+}
+
+.no-documents button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.no-documents button:hover {
+    background-color: #0056b3;
+}
+
+.documents-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.documents-table th,
+.documents-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.documents-table th {
+    background-color: #487799;
+    color: white;
+}
+
+.documents-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.documents-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Edit button styles */
+.edit {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 10px 36px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.edit:hover {
+    background-color: #45a049; /* Darker green */
+    transform: scale(1.05);
+}
+
+.edit:focus {
+    outline: 2px solid #000000; /* Black outline for accessibility */
+    outline-offset: 2px;
+}
+
+/* Delete button styles */
+.deleteButton {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 8px 12px;
+    background-color: #f44336; /* Red */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-left: 10px; /* Adds spacing between buttons */
+}
+
+.deleteButton:hover {
+    background-color: #d32f2f; /* Darker red */
+    transform: scale(1.05);
+}
+
+.deleteButton:focus {
+    outline: 2px solid #000000; /* Black outline for accessibility */
+    outline-offset: 2px;
+}
+/* Return PDF button styles */
+.returnpdf {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 8px 12px;
+    background-color: #487799; /* Blue */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.returnpdf:hover {
+    background-color: #0056b3; /* Darker blue */
+    transform: scale(1.05);
+}
+
+.returnpdf:focus {
+    outline: 2px solid #000000; /* Black outline for accessibility */
+    outline-offset: 2px;
+}
+
+/* Delete button styles */
+.deleteButton {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 8px 12px;
+    background-color: #b46863; /* Red */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-left: 10px; /* Adds spacing between buttons */
+}
+
+.deleteButton:hover {
+    background-color: #d32f2f; /* Darker red */
+    transform: scale(1.05);
+}
+
+.deleteButton:focus {
+    outline: 2px solid #000000; /* Black outline for accessibility */
+    outline-offset: 2px;
+}
+
+
+.view {
+    padding: 8px 12px;
+    background-color: #17a2b8; /* Teal */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.view:hover {
+    background-color: #138496;
+}
+.button-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px 0; /* Add some spacing around the buttons if needed */
+}
+.delete-selected {
+    background-color: #5f95b1; /* Red background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth hover effect */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-selected:hover {
+    background-color: #5f95b1; /* Darker red on hover */
+    transform: scale(1.05); /* Slight scaling on hover */
+}
+
+.delete-selected:disabled {
+    background-color: #d9d9d9; /* Gray background when disabled */
+    color: #a6a6a6; /* Lighter gray text when disabled */
+    cursor: not-allowed; /* Show not-allowed cursor when disabled */
+    transform: none; /* No scaling when disabled */
+}
+.search-container {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 50%; /* Full viewport height */
+    background-color: #f8f9fa; /* Optional: light background for contrast */
+    margin-left: 30%;
+}
+
+.search-bar {
+    width: 100%; /* Full width of the parent container */
+    max-width: 300px; /* Set a maximum width */
+    padding: 8px 16px; /* Inner padding for spacing */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size for the text */
+    color: #333; /* Dark gray text color */
+    outline: none; /* Remove default outline */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+    box-shadow: none; /* No shadow by default */
+}
+
+.search-bar::placeholder {
+    color: #aaa; /* Light gray placeholder text */
+    font-style: italic; /* Italic style for placeholder */
+}
+
+.search-bar:focus {
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle blue shadow */
+}
+
+.search-bar:hover {
+    border-color: #999; /* Darker gray border on hover */
+}
+
+/* For better responsiveness on smaller screens */
+@media (max-width: 600px) {
+    .search-bar {
+        max-width: 100%; /* Full width on smaller screens */
+        font-size: 14px; /* Slightly smaller font size */
+    }
+}

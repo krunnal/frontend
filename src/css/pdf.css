@@ -1,0 +1,194 @@
+/* General Styles */
+
+/* Header */
+h1, h2 {
+    font-family: 'Georgia', serif;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    text-align: center;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 5px;
+}
+
+h2 {
+    font-size: 18px;
+    border-bottom: 1px solid #ccc;
+    margin-top: 20px;
+    padding-bottom: 5px;
+}
+
+/* Section styling */
+section {
+    margin-top: 20px;
+}
+
+/* Paragraph */
+p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Strong Text */
+strong {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Lists */
+ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+td {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Signature Lines */
+.signature-line {
+    margin-top: 30px;
+}
+
+.signature-line p {
+    display: inline-block;
+    width: 45%;
+    margin-right: 10%;
+}
+
+.signature-line p strong {
+    width: 100%;
+    display: inline-block;
+}
+
+/* Button */
+
+
+button:hover {
+    background-color: #34495e;
+}
+
+/* Page Breaks */
+div[style*="pageBreakBefore"] {
+    page-break-before: always;
+    height: 20px;
+}
+
+/* Miscellaneous */
+em {
+    font-style: italic;
+    color: #666;
+}
+
+/* Form Input Fields */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Footer (for page numbering, etc.) */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 12px;
+    color: #777;
+}
+/* General Signature Line Styling */
+.signature-line {
+    margin-top: 20px;
+}
+
+/* Each Row of the Signature Line */
+.signature-row {
+    margin-bottom: 12px; /* Space between rows */
+}
+
+/* Ensure each row aligns correctly */
+.signature-row p {
+    display: inline-block; /* Keeps the label and line together */
+    width: 100%; /* Ensures full-width for each row */
+    margin: 0;
+}
+
+/* Customize the signature lines (optional) */
+.signature-line p strong {
+    width: 50%; /* Adjust as necessary */
+    display: inline-block;
+}
+
+.signature-line p {
+    display: inline-block;
+    width: calc(50% - 20px); /* Space for the "_____________" line */
+}
+
+.signature-line p:after {
+    content: "__________________";
+    margin-left: 10px;
+}
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container styling */
+.signature-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Each row within signature-line */
+.signature-row {
+    flex: 1; /* Ensures each row takes equal width */
+    margin-right: 10px;
+}
+
+/* Optional: Remove margin for last element in each line */
+.signature-row:last-child {
+    margin-right: 0;
+}
+
+/* For each paragraph inside signature-row */
+.signature-row p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Optional styling for labels */
+.signature-row strong {
+    font-weight: bold;
+}

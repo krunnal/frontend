@@ -1,0 +1,407 @@
+/* General container styling */
+.payment-details-container {
+  
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Headings */
+.payment-details-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+.payment-details-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #555;
+} 
+.payment-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1e1e1e; /* Dark background */
+   /* White text */
+  font-family: Arial, sans-serif;
+}
+
+.payment-table thead {
+  background-color: #292929; /* Slightly lighter for headers */
+  text-align: left;
+}
+
+.payment-table th, .payment-table td {
+  padding: 12px 15px;
+  border: 1px solid #333; /* Border with darker shade */
+}
+
+.payment-table tbody tr:nth-child(even) {
+  background-color: #2a2a2a; /* Alternating row colors */
+}
+
+.payment-table tbody tr:hover {
+  background-color: #3a3a3a; /* Hover effect */
+}
+
+.order-id-column {
+  width: 15%; /* Smaller width for Order ID column */
+}
+
+.view-btn {
+  background-color: #f56c6c; /* Button color */
+  
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.view-btn:hover {
+  background-color: #e35d5d; /* Hover effect for button */
+}
+
+
+/* Balance information */
+/* Container for balance info */
+.balance-info {
+  padding: 15px;
+ 
+  /* White background */
+  border: 1px solid #ddd;
+  /* Light border for separation */
+  border-radius: 8px;
+  /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+  max-width: 400px;
+  /* Limit width for balance info */
+  margin: 0 auto 20px;
+  /* Center align and add spacing below */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Styling for the account label */
+.account-label {
+  font-size: 1rem;
+  font-weight: bold;
+  /* Highlight the label */
+  color: #333;
+  /* Dark text color */
+  margin-bottom: 5px;
+  /* Space below */
+}
+
+/* Styling for the account email */
+.account-email {
+  font-size: 1rem;
+  color: #555;
+  /* Slightly lighter text */
+  margin-bottom: 10px;
+  /* Space below */
+}
+
+/* Styling for the balance */
+.account-balance {
+  font-size: 1.1rem;
+  font-weight: bold;
+  /* Highlight the balance */
+  color: #007bff;
+  /* Blue color for emphasis */
+}
+.with-line {
+  border-bottom: 1px solid #444; /* Thin line below text */
+  /* Space below the line */
+}
+.balance-info strong {
+  color: #333;
+  font-size: 1.1rem;
+}
+
+/* Recharge button */
+.recharge-btn-container {
+  
+  text-align: center;
+}
+
+.recharge-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.recharge-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Table styling */
+.payment-info {
+  overflow-x: auto;
+}
+
+.payment-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.payment-table th,
+.payment-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+  font-size: 0.9rem;
+}
+
+.payment-table th {
+  
+  color: #333;
+}
+
+.payment-table tr:nth-child(even) {
+
+}
+
+.payment-table tr:hover {
+  
+}
+
+.payment-table td {
+  color: #555;
+}
+
+.order-id-column {
+  max-width: 150px;
+  word-wrap: break-word;
+}
+
+/* View button in table */
+.view-btn {
+  padding: 6px 12px;
+  background-color: #28a745;
+  
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.view-btn:hover {
+  background-color: #218838;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .payment-details-container {
+    padding: 10px;
+  }
+
+  .payment-table th,
+  .payment-table td {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  .recharge-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .view-btn {
+    font-size: 0.8rem;
+  }
+}
+.balance-container {
+  display: flex;
+  gap:100px;/* Ensures the balance and button are at opposite ends */
+  align-items: center; /* Vertically centers the items */
+  padding: 10px; /* Adds some space inside the container */
+  border: 1px solid #ddd; /* Optional: Add a border for visual clarity */
+  border-radius: 5px; /* Optional: Rounded corners */
+}
+
+.account-balance {
+  font-size: 12px; /* Makes the balance text smaller */
+  color: #555; /* Optional: Subtle text color */
+}
+
+.recharge-btn-container {
+  display: flex; /* Ensures proper alignment */
+}
+
+.recharge-btn {
+  font-size: 12px; /* Small button text */
+  padding: 5px 10px; /* Compact padding */
+  background-color: #007bff; /* Button color */
+ ; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 3px; /* Rounded button */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease;
+}
+
+.recharge-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+.balance-container {
+  display: flex; /* Places items in a row */
+ /* Spreads items out evenly */
+  
+}
+
+.account-balance {
+  font-size: 14px; /* Smaller text size */
+  color: #070606;
+  font-weight: 50000; /* Optional: Subtle text color */
+}
+
+.recharge-btn-container {
+  display: flex; 
+  margin-left: 65%;/* Ensures proper alignment for the button */
+}
+
+.recharge-btn {
+  font-size: 12px; /* Smaller button text */
+  padding: 5px 10px; /* Compact padding */
+  background-color: #007bff; /* Button color */
+   /* Text color */
+  border: none; /* Remove border */
+  border-radius: 3px; /* Rounded button */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease;
+}
+
+.recharge-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+@media (min-width: 1201px) {
+  .payment-table th,
+  .payment-table td {
+    padding: 15px 20px;
+    font-size: 1rem;
+  }
+
+  .recharge-btn {
+    font-size: 1.1rem;
+    padding: 12px 24px;
+  }
+}
+
+/* Devices with width between 991px and 1200px (tablets and large screens) */
+@media (max-width: 1200px) and (min-width: 991px) {
+  .payment-table th,
+  .payment-table td {
+    padding: 12px 15px;
+    font-size: 1rem;
+  }
+
+  .balance-info {
+    max-width: 100%;
+    padding: 12px;
+  }
+
+  .recharge-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+/* Devices with width between 768px and 990px (tablets and smaller screens) */
+@media (max-width: 990px) and (min-width: 768px) {
+  .payment-table th,
+  .payment-table td {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  .balance-info {
+    max-width: 100%;
+    padding: 12px;
+  }
+
+  .recharge-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+/* Devices with width between 576px and 767px (small tablets and large phones) */
+@media (max-width: 767px) and (min-width: 576px) {
+  .payment-table th,
+  .payment-table td {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+  }
+
+  .balance-info {
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+
+  .account-balance {
+    font-size: 1rem;
+  }
+
+  .recharge-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .view-btn {
+    font-size: 0.9rem;
+  }
+}
+
+/* Devices with width between 375px and 575px (smaller phones) */
+@media (max-width: 575px) and (min-width: 375px) {
+  .payment-details-container {
+    padding: 15px;
+  }
+
+  .payment-table th,
+  .payment-table td {
+    padding: 6px 8px;
+    font-size: 0.75rem;
+  }
+
+  .recharge-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .account-balance {
+    font-size: 0.9rem;
+  }
+}
+
+/* Devices with width 375px and below (small portrait phones) */
+@media (max-width: 374px) {
+  .payment-details-container {
+    padding: 10px;
+  }
+
+  .payment-table th,
+  .payment-table td {
+    padding: 6px 8px;
+    font-size: 0.7rem;
+  }
+
+  .recharge-btn {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+  }
+
+  .account-balance {
+    font-size: 0.85rem;
+  }
+}

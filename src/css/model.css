@@ -1,0 +1,159 @@
+.asset-wrapper {
+    display: flex; /* Flex layout for form and table */
+    justify-content: space-between; /* Ensure even spacing between form and table */
+     /* Wrap items if the screen is too small */
+    /* width: 100%; */
+    height: inherit;
+    gap:20px
+}
+
+.asset-form {
+    flex: 1 1 45%; /* Takes 45% width but can shrink/grow */
+    min-width: 300px; /* Minimum width for the form */
+    /* padding: 20px; */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nominee-percentage-row {
+    display: flex; /* Use Flexbox to align items horizontally */
+    gap: 20px; /* Add space between the two elements */
+    align-items: flex-start; /* Align labels and inputs at the top */
+    /* Add space below the row */
+}
+
+.nominee-selector,
+.percentage-input {
+    flex: 1; /* Allow both elements to take equal width */
+}
+
+.nominee-selector label,
+.percentage-input label {
+    display: block; /* Ensure labels are above inputs */
+    margin-bottom: 5px; /* Add spacing between label and input */
+}
+
+.nominee-selector select,
+.percentage-input input {
+    width: 100%; /* Ensure inputs take the full width of their container */
+    padding: 8px; /* Add padding for better usability */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 4px; /* Round the corners */
+    box-sizing: border-box; /* Include padding in width calculations */
+    gap:20px
+}
+
+.large-input {
+    width: 100%; /* Full width of the parent container */
+    height: 3rem; /* Adjust the height to make it bigger */
+    padding: 0.5rem; /* Add some padding for better appearance */
+    font-size: 1rem; /* Adjust the font size */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in width/height */
+}
+.combination{
+    background-color: #487799;
+    color: #fff;
+    text-align: center;
+    height: 30px;
+    border-radius: 3px 3px 0 0;
+    font-weight: 400;
+    font-family: Nunito Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+
+}
+
+.asset-table {
+    flex: 1 1 45%; /* Takes 45% width but can shrink/grow */
+    min-width: 300px; /* Minimum width for the table */
+  
+    border-radius: 8px;
+}
+
+.nominee-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .nominee-table th,
+  .nominee-table td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  .percentage-column {
+    width: 10%; /* Small width for Percentage column */
+    text-align: center; /* Align content to center */
+  }
+  
+  .comment-column {
+    width: 50%; /* Larger width for Comment column */
+  }
+  
+  .actions-column {
+    width: 15%; /* Small width for Actions column */
+    text-align: center; /* Align content to center */
+  }
+  
+  /* Optional: Style the table for better visuals */
+  .nominee-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .nominee-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  /* General button styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 10px; /* Space between buttons */
+}
+
+/* Hover effect */
+.btn:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific styles for "Add Nominee" button (green) */
+.btn-green {
+    background-color: #28a745;
+}
+
+.btn-green:hover {
+    background-color: #1e7e34;
+}
+
+/* Default primary button style (blue) */
+.btn-primary {
+    background-color: #487799;
+}
+
+.btn-primary:hover {
+    background-color: #525559;
+}
+
+/* Specific styles for "Add Asset" button (yellow) */
+.btn-yellow {
+   background-color: cadetblue;
+    color: #000;
+}
+
+
+
+/* Specific styles for "Close" button (red) */
+.btn-red {
+    background-color: white;
+    color: black;
+    border: 1px solid
+}
+

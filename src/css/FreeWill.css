@@ -1,0 +1,263 @@
+/* General Styles for the Container */
+.free-will-form-container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #fff;
+    border-radius: .2rem;
+    box-shadow: 0 1px 3px #1f1f1f4d, 1px 1px 2px #1f1f1f1a;
+    display: flex
+;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex
+;
+    flex-direction: column;
+    /* gap: 8px; */
+    text-align: center;
+    width: 80%;
+    padding: 10px;
+
+} 
+
+/* Heading Styling */
+h2 {
+    color: #333; /* Darker color for the heading */
+}
+
+/* Label Styling */
+/* Label Styling */
+label {
+    display: block; /* Ensure labels are block-level for proper spacing */
+    margin-bottom: 5px; /* Reduced space between label and input */
+    font-size: 1rem;
+    color: #0d0b0b; /* Slightly lighter color for labels */
+    text-align: left;
+    margin-left: 10px;
+}
+
+/* Input and Select Styling */
+input, select {
+    width: 100%; /* Full width inputs */
+    padding: 10px;
+   /* Reduced space between label and input */
+    border: 1px solid #87abcd;
+    border-radius: 5px;
+    /* Match font size to labels */
+    transition: border 0.3s;
+}
+
+/* Input Focus Styling */
+input:focus, select:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+
+/* Error Message Styling */
+.error {
+    color: red; /* Error message color */
+    font-size: 0.9rem;
+    margin-top: 5px; /* Space above error message */
+}
+
+/* Button Styling */
+/* button {
+    background-color: #47656e; 
+    color: white;
+    background-color: #487799;
+    border: 1px solid #487799;
+    border-radius: .1875rem;
+    box-sizing: border-box;
+    color: #1f1f1f;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: .25rem .875rem;
+    text-align: center;
+    text-decoration: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    -webkit-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+    background-color: #487799;
+    border: 1px solid #487799;
+    border-radius: .1875rem;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 15px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: Cambria, serif;
+
+} */
+
+
+button:active {
+    transform: translateY(1px); /* Slight press effect */
+}
+
+/* Beneficiary Group Styling */
+.beneficiary-group {
+    margin-bottom: 1rem;
+  }
+  
+  .beneficiary-row {
+    display: flex;
+    gap: 1rem; /* Adjust spacing between fields */
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  
+  .button-containe {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.add-beneficiary-btn {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-beneficiary-btn:hover {
+    background-color: #0056b3;
+}
+
+.submit-btn {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+}
+
+/* Input inside Beneficiary Group Styling */
+input {
+    flex: 1; /* Make each input take equal width */
+    padding: 6px; /* Add some padding for aesthetics */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    display: flex;
+    justify-content: center; /* Centers the content */ /* Ensures the content doesn't hide behind the navbar */
+    height: calc(100vh - 10px); /* Full height minus navbar */
+}
+
+/* Main Content */
+.main-content {
+     /* To make space for the sidebar */
+    flex: 1;
+    background-color: white;
+    height: 100%;
+    overflow-y: auto; /* Allows scrolling if content is long */
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 60px; /* Sidebar starts below the navbar */
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 60px); /* Full height minus navbar height */
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Adjust the free-will form container for mobile */
+    .free-will-form-container {
+        margin-left: 0; /* Remove the left margin */
+        width: 100%; /* Make the form full width */
+        margin-top: 80px; /* Ensure form isn't hidden behind navbar */
+    }
+    
+    /* Adjust content and sidebar for small screens */
+    .content-wrapper {
+        flex-direction: column; /* Stack content vertically */
+    }
+
+    .sidebar {
+        width: 100%; /* Sidebar takes full width on small screens */
+        position: relative;
+    }
+
+    .main-content {
+        margin-left: 0; /* Remove left margin */
+    }
+}
+
+  .radio-group {
+    display: flex;
+    gap:10%;
+margin-left:23%
+  }
+  
+  .marital-status-box {
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9dbcd3;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    text-align: center;
+    margin-right: 10px;
+  }
+  
+  .marital-status-box.selected {
+    background-color: #4CAF50; /* Green background for selected box */
+    border-color: #4CAF50;     /* Green border for selected box */
+    color: white;              /* White text when selected */
+  }
+  
+  .marital-status-box:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .marital-status-box.selected:hover {
+    background-color: #45a049;
+  }
+  
+  .marital-status-box input[type="radio"] {
+    display: none; /* Hide default radio button */
+  }
+  
+  .marital-status-box span {
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .error {
+    color: red;
+    font-size: 12px;
+  }
+  
+  

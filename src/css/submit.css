@@ -1,0 +1,1792 @@
+/* General container styles */
+.header1 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Nunito Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji';
+  /* margin-bottom: 20px; */
+  color: rgb(69, 65, 65);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Make the container take the full viewport height */
+  text-align: center;
+  /* Optional, for aligning text */
+  background: #fff;
+  border-radius: .2rem;
+  box-shadow: 0 1px 3px #1f1f1f4d, 1px 1px 2px #1f1f1f1a;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.table-container {
+  margin: 20px;
+  overflow-x: auto;
+  /* For responsiveness */
+}
+
+.classic-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  table-layout: fixed;
+  /* Ensures table cells respect set widths */
+}
+
+.classic-table th,
+.classic-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  word-wrap: break-word;
+  /* Allows long words to break and wrap */
+  white-space: normal;
+  /* Ensures content wraps to the next line */
+  overflow-wrap: break-word;
+  /* Additional support for word wrapping */
+  text-overflow: ellipsis;
+  /* Handles overflow gracefully */
+}
+
+.classic-table th.wide-column,
+.classic-table td.wide-column {
+  width: 30%;
+  /* Larger width for description and comments */
+}
+
+.classic-table th.narrow-column,
+.classic-table td.narrow-column {
+  width: 10%;
+  /* Smaller width for percentage and actions */
+}
+
+.classic-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.classic-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+
+
+
+
+
+
+
+.container {
+  max-width: 1100px;
+  /* Adjust the overall width */
+  margin: auto;
+  padding: 10px; 
+  /* border: 1px solid #ccc; */
+  border-radius: 8px;
+  /* Reduce font size */
+
+}
+
+.flex-container {
+  display: flex;
+  gap: 20px;
+  /* Space between the left boxes and the right table */
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  /* Center the container on the page */
+  align-items: flex-start;
+  margin: 20px;
+  /* display: grid
+  ;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(30, auto);
+      grid-gap: .5rem;
+      box-sizing: border-box;
+      position: relative;
+      color: #544b4b;
+      font-family: Nunito Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+      line-height: 1.5;
+      font-size: 16px; */
+}
+
+.form-container {
+ 
+  /* Enables flexbox layout */
+  justify-content: space-between;
+  /* Space between left and right sections */
+  
+  /* Align items at the top */
+  gap: 20px;
+  /* Space between left and right sections */
+  width: 100%;
+  /* Ensure the container spans the full width */
+  /* margin-top: 20px; */
+}
+
+.form-left {
+ 
+  /* Left section takes 50% of the width */
+ 
+  background-color: #fff;
+  border-radius: 8px;
+ 
+}
+
+.assets-right {
+  width: 100%;
+  padding:9px
+  /* Right section takes 50% of the width */
+}
+
+.nextButton{
+  background-color: #487799; /* Green background */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding inside the button */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.nextButton:hover {
+  background-color: #45a049; /* Slightly darker green on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.nextButton:active {
+  background-color: #3e8e41; /* Even darker green when clicked */
+  transform: scale(0.95); /* Slight shrink effect */
+}
+
+
+
+
+.asset-box-container {
+  display: grid;
+  /* Use grid for layout */
+  grid-template-columns: repeat(4, 1fr);
+  /* Four columns */
+  gap: 15px;
+  /* Space between boxes */
+  width: 100%;
+  /* Full width container */
+}
+
+.asset-type-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  /* Space between each box */
+}
+
+.asset-type-box {
+  flex: 1 1 calc(33.333% - 10px);
+  /* 3 boxes per row with spacing */
+  padding: 30px 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-family: 'Nunito Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji';
+
+}
+
+.asset-type-box:hover {
+  background-color: #e2e8f0;
+  border-color: #007bff;
+  transform: translateY(-2px);
+}
+
+.asset-type-box.selected {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #0056b3;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.asset-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+
+
+
+.table-container {
+  max-height: 220px;
+  /* 3 rows of 40px height each */
+  overflow-y: auto;
+  /* Enables vertical scrolling when content overflows */
+
+}
+
+.table-container {
+  max-height: 220px;
+  /* Adjust this based on the height of 3 rows */
+  overflow-y: auto;
+  /* Enables vertical scrolling when content overflows */
+  position: relative;
+}
+
+.classic-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.classic-table th,
+.classic-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  height: 40px;
+  /* Ensures each row has a fixed height of 40px */
+}
+
+.classic-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  position: sticky;
+  /* Makes the header sticky */
+  top: 0;
+  /* Sticks the header to the top */
+  z-index: 1;
+  /* Ensures the header stays above the table body */
+}
+
+.classic-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.classic-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+
+
+.table-container {
+  flex: 1;
+  min-width: 150px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.nominee-percentage-container {
+  display: flex;
+  gap: 10px;
+  /* Adds space between Nominee and Percentage */
+  margin-bottom: 20px;
+}
+
+.nominee-container,
+.percentage-container {
+  flex: 1;
+  /* Makes both containers take up equal space */
+}
+
+.nominee-container select,
+.percentage-container input {
+  width: 100%;
+  /* Ensures inputs take up full available space */
+}
+
+
+
+
+
+.nominee-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.nominee-table th,
+.nominee-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.nominee-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.nominee-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.nominee-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Custom CSS */
+
+/* Form Section Style */
+.form-section {
+  /* Light grey background */
+  /* padding: 20px; */
+  border-radius: 8px;
+}
+
+/* Error Message Style */
+.text-danger {
+  font-size: 0.875rem;
+  color: #dc3545;
+  margin-top: 5px;
+}
+
+/* Loading Spinner Style */
+.loading-container {
+  margin-top: 20px;
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Button Spacing and Styling */
+.btn {
+  padding: 10px 20px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+/* Input Fields */
+.form-control {
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.form-select {
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Column Layout Adjustments for Larger Screens */
+@media (min-width: 768px) {
+  .col-md-6 {
+    padding-right: 15px;
+  }
+}
+
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  /* gap: 8px; */
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  /* Reduce gaps between fields */
+
+}
+
+.asset-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* Allows wrapping if space is insufficient */
+  gap: 20px;
+  /* Space between the form and the table */
+  align-items: flex-start;
+  /* Align items to the top */
+}
+
+
+
+/* Input Group */
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group-row {
+  display: flex;
+  align-items: center;
+  /* Vertically align the input groups */
+  gap: 0;
+
+  /* Remove gap between the elements */
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Labels */
+.input-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #8ba1ae;
+}
+
+/* Input Fields */
+.input-field,
+.input-select {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #484242;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+
+}
+
+/* Focus States */
+.input-field:focus,
+.input-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Error Message */
+.error-message {
+  margin-top: 5px;
+  font-size: 12px;
+  color: red;
+}
+
+/* Placeholder Text */
+::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Select Styling */
+.input-select {
+  cursor: pointer;
+  appearance: none;
+  background: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2210%22%20height%3D%225%22%3E%3Cpath%20d%3D%22M0%200l5%205%205-5z%22%20fill%3D%22%23777%22/%3E%3C/svg%3E') no-repeat right 10px center;
+  background-size: 10px;
+}
+
+/* Disabled Option Styling */
+.input-select option[disabled] {
+  color: #bbb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .input-row {
+    flex-direction: column;
+  }
+}
+
+
+
+/* Label styles */
+label {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  font-weight: normal;
+  font-family: 'Nunito Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji';
+  color: rgb(83, 81, 81);
+  text-align: left;
+  font-family: 'Nunito Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji';
+}
+
+p {
+  font-size: 16px;
+  /* Adjust font size */
+  line-height: 1.6;
+  /* Adjust line height for spacing */
+  font-family: 'Nunito Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji';
+  /* Change to a more common font or your desired font */
+ 
+  /* Increase the top margin for more space between paragraphs */
+ 
+  /* Add a bottom margin to separate paragraphs */
+  color: #333;
+  /* Optional: You can change the text color */
+}
+
+.input-row {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+
+  /* Add spacing between inputs */
+}
+
+.input-group {
+  width: 100%;
+  text-align: center;
+}
+
+.input-group1 {
+  width: 50%;
+  text-align: center;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Nunito Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  ;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  color: #333;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+td {
+  color: #555;
+}
+
+/* Error message styling */
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Button Styling */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.save-next-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.previous-button,
+.save-button,
+.next-button {
+  padding: 2px 5px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.previous-button {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.save-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.next-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.previous-button:hover,
+.save-button:hover,
+.next-button:hover {
+  opacity: 0.8;
+}
+
+/* Loading Spinner Styles */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+/* Input styles */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  line-height: 1.4;
+  box-sizing: border-box;
+  background-color: rgb(245, 245, 248); 
+  transition: background-color 0.3s ease;
+}
+
+/* Focus states for inputs */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus {
+  background-color: transparent;
+  border-color: #324860;
+  outline: none;
+}
+
+/* Button styles */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.save-button,
+.next-button {
+  padding: 15px 25px;
+  font-size: 1rem;
+  color: white;
+  background-color: #487799;
+  border: 1px solid #487799;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.save-button:hover,
+.next-button:hover {
+  background-color: #3b5b78;
+  border-color: #3b5b78;
+  transform: scale(1.05);
+}
+
+/* Error message styles */
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-family: inherit;
+  font-weight: bold;
+  background-color: rgba(255, 0, 0, 0.1);
+  padding: 3px;
+  border-left: 4px solid red;
+  border-radius: 4px;
+}
+
+.modal-overlay {
+  top: 20px;
+  left: 50px;
+  right: 100px;
+  bottom: 0;
+  /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  /* Ensure the modal is on top of everything */
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 8px;
+  width: 1200px;
+  /* Increased width */
+  max-width: 100%;
+  /* Ensure it does not overflow on smaller screens */
+  max-height: 90vh;
+  /* Limit the height to 80% of the viewport height */
+  overflow-y: auto;
+  /* Enable vertical scrolling */
+
+}
+
+/* Basic Styling for Labels */
+label {
+  font-size: 16px;
+  /* Set a readable font size */
+  font-weight: 500;
+  /* Slightly bolder text for labels */
+  color: #333;
+  /* Dark text color for contrast */
+  margin-bottom: 8px;
+  /* Space between label and input field */
+  display: block;
+  /* Ensure the label takes up a full line */
+  margin-top: 12px;
+  /* Adds a little spacing on top for better spacing between fields */
+  font-family: Cambria, serif;
+}
+
+/* Styling for Input Fields Next to Labels */
+label+input,
+label+select,
+label+textarea {
+  width: 100%;
+  /* Make sure input fields are full width */
+  padding: 8px;
+  /* Add padding inside input fields */
+  border: 1px solid #87abcd;
+  /* Light border for inputs */
+  border-radius: 4px;
+  /* Rounded corners for input fields */
+
+  /* Space between input and next field */
+  box-sizing: border-box;
+  /* Ensures padding doesn't affect width */
+  font-family: Cambria, serif;
+  appearance: none;
+  background-clip: padding-box;
+  background-color: #f8fafc;
+  border: 1px solid #d1d1d1;
+  border-radius: .1875rem;
+  box-sizing: border-box;
+  color: #1f1f1f;
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  min-height: calc(1.5em + .5rem + 2px);
+  padding: 12px;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  width: 100%;
+}
+
+/* Styling for Focused Input Fields */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #007bff;
+  /* Blue border color on focus */
+  outline: none;
+  /* Remove default outline */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+  /* Slight shadow on focus */
+}
+
+/* Adjust Labels for Small Screens */
+@media (max-width: 768px) {
+  label {
+    font-size: 14px;
+    /* Smaller font size for smaller screens */
+    margin-top: 8px;
+    /* Slightly reduce top margin */
+  }
+
+  label+input,
+  label+select,
+  label+textarea {
+    padding: 10px;
+    /* Slightly bigger padding on smaller screens */
+  }
+}
+
+
+
+
+/* Radio button group styles */
+.radio-group {
+  display: flex;
+  justify-content: space-around;
+}
+
+.marital-status-box {
+  width: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+  text-align: center;
+}
+
+.marital-status-box1 {
+  width: 200px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7b97dc;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+  text-align: center;
+}
+
+.marital-status-box1.selected {
+  background-color: #4CAF50;
+  /* Green background for selected box */
+  border-color: #4CAF50;
+  /* Green border for selected box */
+  color: white;
+  /* White text when selected */
+}
+
+.marital-status-box.selected {
+  background-color: #4CAF50;
+  /* Green background for selected box */
+  border-color: #4CAF50;
+  /* Green border for selected box */
+  color: white;
+  /* White text when selected */
+}
+
+.marital-status-box:hover {
+  background-color: #e0e0e0;
+}
+
+.marital-status-box.selected:hover {
+  background-color: #45a049;
+}
+
+.marital-status-box input[type="radio"] {
+  display: none;
+  /* Hide default radio button */
+}
+
+.marital-status-box span {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+
+/* Modal styles */
+
+/* Close button styles */
+.close-btn {
+  cursor: pointer;
+  float: right;
+  font-size: 20px;
+}
+
+/* Spinner */
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+/* Spinner Animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Loading container */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 20px;
+  z-index: 1000;
+  flex-direction: column;
+}
+
+/* Loading message */
+.loading-container p {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+/* Responsive Design for Tablets and Mobiles */
+
+/* Tablet - 768px to 1024px */
+@media (max-width: 1024px) {
+  .container {
+    padding: 20px;
+    /* Reduce padding for tablets */
+  }
+
+  .header1 {
+    font-size: 1.8rem;
+    /* Slightly smaller font on tablets */
+    margin-left: 20px;
+  }
+
+  /* Input fields */
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="date"],
+  select {
+    font-size: 1rem;
+    /* Slightly smaller font for better readability */
+  }
+
+  /* Button adjustments */
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .save-button,
+  .next-button {
+    width: 80%;
+    /* Reduce width to make the buttons smaller */
+    padding: 10px 15px;
+    /* Smaller padding for a more compact button */
+    font-size: 0.9rem;
+    /* Slightly smaller font size */
+    margin-bottom: 10px;
+    /* Space between buttons */
+  }
+
+  /* Error message font size */
+  .error {
+    font-size: 0.85rem;
+  }
+}
+
+
+/* Mobile - 768px and below */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+    /* Less padding for mobile */
+  }
+
+  .header1 {
+    font-size: 1.6rem;
+    /* Reduce font size for mobile */
+    margin-left: 15px;
+  }
+
+  /* Input fields */
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="date"],
+  select {
+    font-size: 0.9rem;
+    padding: 8px;
+    /* Reduced padding for mobile */
+  }
+
+  /* Button adjustments */
+  .save-button,
+  .next-button {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    /* Smaller buttons on mobile */
+    margin-bottom: 10px;
+    /* Add space between buttons */
+  }
+
+  /* Error message adjustments */
+  .error {
+    font-size: 0.8rem;
+  }
+
+  /* Reduce header font size on mobile */
+  .header1 {
+    font-size: 1.4rem;
+    /* Smaller heading font on mobile */
+    margin-left: 10px;
+  }
+}
+
+.asset-container {
+  display: flex;
+  justify-content: space-between;
+  /* Aligns the form to the left and table to the right */
+  gap: 20px;
+  /* Space between the form and the table */
+  align-items: flex-start;
+  /* Align items to the top */
+}
+
+
+
+
+
+.nominee-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.nominee-table th,
+.nominee-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.nominee-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.nominee-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.nominee-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+
+
+
+
+/* .form-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+} */
+
+.form-left {
+  width: 100%;
+  
+}
+
+
+
+h3 {
+  font-size: 20px;
+  /* Larger heading for better readability */
+  color: #333;
+  /* Dark text color for headings */
+  margin-bottom: 15px;
+  /* Spacing below each heading */
+  border-bottom: 2px solid #ddd;
+  /* Light border below headings for separation */
+  padding-bottom: 5px;
+  /* Add a bit of space below the text */
+}
+
+ul {
+  list-style-type: none;
+  /* Remove default list bullets */
+  padding-left: 0;
+  /* Remove padding */
+}
+
+/* Styles for the asset container */
+
+
+h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.asset-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.asset-item {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.asset-item strong {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.nominee-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.nominee {
+  color: #16a085;
+}
+
+.remaining-percentage {
+  font-weight: bold;
+  color: #e74c3c;
+  font-size: 14px;
+}
+
+/* Asset Table Styles */
+
+h3 {
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+
+}
+
+.asset-table {
+  width: 100%;
+  margin-top: 0px;
+  overflow-x: auto;
+  /* Handle wide tables on small screens */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  /* Keep the table background white */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  /* Light shadow */
+  /* margin-bottom: 20px; */
+}
+
+table th,
+table td {
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  /* Light grey border */
+  text-align: left;
+}
+
+table th {
+  background-color: #f5f5f5;
+  /* Light grey background for header */
+  color: #333;
+  /* Dark text color for header */
+  font-weight: 600;
+  /* Slightly bolder header text */
+}
+
+table td {
+  background-color: #fff;
+  /* White background for data rows */
+}
+
+.nominee {
+  margin-bottom: 5px;
+  color: #333;
+  /* Dark grey text for nominees */
+}
+
+.nominee:last-child {
+  margin-bottom: 0;
+}
+
+.nominee-details {
+  font-size: 14px;
+}
+
+.remaining-percent {
+  color: #7f8c8d;
+  /* Muted grey for remaining percentage */
+  font-weight: normal;
+}
+
+@media (max-width: 768px) {
+
+  table th,
+  table td {
+    padding: 10px;
+    /* Slightly reduce padding on smaller screens */
+  }
+}
+
+.radio-box-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.radio-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  /* Each box takes up 45% of the container width */
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  /* Makes the whole box clickable */
+}
+
+.left-box {
+  background-color: #ffefef;
+  /* Light red background for "Yes" */
+}
+
+.right-box {
+  background-color: #e0f7fa;
+  /* Light blue background for "No" */
+}
+
+.radio-box label {
+  display: flex;
+  align-items: center;
+  font-family: 'Georgia', serif;
+}
+
+.radio-box input[type="radio"] {
+  display: none;
+  /* Hide the default radio button */
+}
+
+.custom-radio {
+  font-size: 16px;
+  color: #555;
+  /* Default text color */
+  user-select: none;
+  /* Prevent text selection */
+  position: relative;
+  padding-left: 30px;
+  /* Space for the custom box */
+  cursor: pointer;
+  display: inline-block;
+}
+
+.custom-radio::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid #333;
+  /* Border for the custom box */
+  background-color: transparent;
+  /* Background color of the box */
+  border-radius: 5px;
+  /* Optional: makes the box rounded */
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.radio-box input[type="radio"]:checked+.custom-radio::before {
+  background-color: #333;
+  /* Change box color when selected */
+  border-color: #333;
+  /* Border color when selected */
+}
+
+.radio-box:hover {
+  background-color: #f4f4f4;
+  /* Hover effect */
+}
+
+/* Container for the asset type boxes */
+
+
+/* Specific styles for Cash and Valuables box */
+.cash-and-valuables-box {
+  /* Keeping it same size as other boxes */
+  flex: 1 1 30%;
+  /* Same size as other boxes */
+  font-size: 18px;
+  /* Same font size as others */
+  padding: 15px 20px;
+  /* Same padding as other boxes */
+  background-color: #fff0f5;
+  /* Light pinkish background for distinction */
+  color: #948f92;
+  /* Distinctive text color */
+  border: 3px solid #535353;
+  /* Matching border color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect */
+.asset-type-box:hover {
+  background-color: #f0f8ff;
+  color: #565b60;
+  border-color: #404244;
+}
+
+/* Hover effect for Cash and Valuables box */
+.cash-and-valuables-box:hover {
+  background-color: #ffebf0;
+  /* Lighter pink on hover */
+  color: #625e60;
+  /* Darker pink on hover */
+  border-color: #575355;
+  /* Darker border on hover */
+}
+
+/* Style for the selected box */
+.asset-type-box.selected {
+  background-color: #595c5f;
+  color: white;
+  border-color: #64676a;
+}
+
+.cash-and-valuables-box.selected {
+  background-color: #585355;
+  color: white;
+  border-color: #7b7578;
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+  .asset-type-box {
+    flex: 1 1 45%;
+    /* 2 per row on medium screens */
+    font-size: 16px;
+    padding: 15px 25px;
+  }
+
+  .cash-and-valuables-box {
+    flex: 1 1 45%;
+    font-size: 16px;
+    padding: 15px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .asset-type-box {
+    flex: 1 1 100%;
+    /* 1 per row on small screens */
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .cash-and-valuables-box {
+    flex: 1 1 100%;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+/* Classic Table Styles */
+.classic-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Nunito Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji';
+}
+
+.classic-table th,
+.classic-table td {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+  /* Default left alignment */
+  vertical-align: middle;
+}
+
+/* Center align text for single word or short text */
+.center-text {
+  text-align: center;
+}
+
+/* Specific column widths for the classic table */
+.classic-table td:nth-child(1) {
+  width: 10%;
+}
+
+.classic-table td:nth-child(2) {
+  width: 25%;
+}
+
+.classic-table td:nth-child(3) {
+  width: 15%;
+}
+
+.classic-table td:nth-child(4) {
+  width: 5%;
+}
+
+.classic-table td:nth-child(5) {
+  width: 30%;
+}
+
+.classic-table td:nth-child(6) {
+  width: 15%;
+}
+
+.classic-table .action-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.classic-table .action-button:hover {
+  background-color: #45a049;
+}
+
+/* Scoped to tables inside .assets-right */
+
+
+.assets-right h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.assets-right .asset-table {
+  overflow-x: auto;
+}
+
+.assets-right table {
+  width: 100%;
+  border-collapse: collapse;
+  
+}
+
+.assets-right thead {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.assets-right th,
+.assets-right td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.assets-right th {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.assets-right td {
+  font-size: 14px;
+}
+
+.assets-right tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.assets-right tr:hover {
+  background-color: #f1f1f1;
+}
+
+.assets-right .nominee {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.assets-right .nominee span {
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+.assets-right .nominee-name {
+  color: #333;
+}
+
+.assets-right .nominee-percentage {
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.assets-right .nominee-residuary {
+  color: #FF6347;
+  font-weight: bold;
+}
+
+.assets-right .error {
+  color: #FF6347;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.assets-right td:last-child {
+  text-align: center;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+  .assets-right table {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .assets-right th,
+  .assets-right td {
+    padding: 8px 10px;
+  }
+
+  .assets-right h3 {
+    font-size: 20px;
+  }
+}
+/* Button container */
+.button-container1 {
+  position: relative; /* Make this container the relative parent */
+  width: 100%; /* Full width */
+  height: 40px; 
+  padding: 3%/* Adjust height as needed */  ; /* Optional background */
+}
+
+/* Previous button on the bottom-left corner */
+.previous-button1{
+  position: absolute; /* Absolutely positioned relative to parent */
+  bottom: 10px; /* Distance from the bottom */
+  left: 10px; /* Distance from the left */
+  background-color: #d0d2d4;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #0000;
+    border: 1px solid #717070;
+    border-radius: .1875rem;
+    box-sizing: border-box;
+    color: #1f1f1f;
+    color: #717070;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: .75rem 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    -webkit-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+}
+
+.previous-button1:hover {
+  background-color: #0056b3;
+}
+
+/* Right buttons container */
+.right-buttons1 {
+  position: absolute; /* Absolutely positioned relative to parent */
+  bottom: 10px; /* Distance from the bottom */
+  right: 10px; /* Distance from the right */
+  display: flex;
+  gap: 10px; /* Space between Save and Next buttons */
+}
+
+/* Save button */
+.save-button1 {
+  background-color: #0000;
+    background-color: #487799;
+    border: 1px solid #487799;
+    border-radius: .1875rem;
+    box-sizing: border-box;
+    color: #1f1f1f;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: .75rem 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    -webkit-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+}
+
+
+
+/* Next button */
+.next-button1 {
+  background-color: #ffc107;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #0000;
+    background-color: #487799;
+    border: 1px solid #487799;
+    border-radius: .1875rem;
+    box-sizing: border-box;
+    color: #1f1f1f;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: .75rem 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    -webkit-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+}
+.meassage-Text{
+  
+    /* font-weight: 600; */
+    font-size: 20px;
+    margin-bottom: .5rem;
+}
+.nominee-Button{
+  background-color: #007bff; /* Primary blue color */
+  color: #fff; /* White text */
+  padding: 10px 20px; /* Padding for the button */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  font-weight: 500; /* Slightly bold text */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+  width: 20%;
+  text-align: center;
+  margin-left: 40%;
+}
+.handlenumber {
+  display: flex; /* Enable Flexbox */
+  justify-content: space-between; /* Distribute space evenly */
+  align-items: center; /* Vertically center the items */
+  /* Add some pading */
+  gap: 20px; /* Add spacing between elements */
+ /* Optional: Add padding around the container */
+}
+
+.handlenumber > * {
+  flex: 1; /* Optional: Make child elements equally take up space */
+  text-align: center; /* Center text inside each element */
+}
+.executor-row {
+  display: flex;
+  gap: 1rem; /* Adjust spacing between inputs */
+  align-items: flex-start; /* Align input fields properly */
+}
+
+.executor-row label {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Equal width for each label */
+  
+}
+
+.executor-row input {
+  margin-top: 0.5rem; /* Space between label text and input field */
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%; /* Make input fields take full width of their container */
+}
+.backup-executor-row {
+  display: flex;
+  gap: 1rem; /* Space between input fields */
+  align-items: flex-start; /* Align inputs properly */
+}
+
+.backup-executor-row label {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Make each label take equal width */
+}
+
+.backup-executor-row input {
+  margin-top: 0.5rem; /* Space between label and input */
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%; /* Full width for input fields */
+}
+
+.text-meassage {
+  font-size: 1.2rem; /* Adjust font size */
+  font-weight: 600; /* Make text slightly bold */
+  color: #333; /* Dark gray color */
+  margin-bottom: 1rem; /* Add space below the label */
+  display: block; /* Ensure the label spans the full width */
+  text-align: left; /* Align text to the left */
+  line-height: 1.5; /* Add some spacing between lines */
+}
+.border-line {
+  width: 100%; /* Full width */
+  height: 1px; /* Thin border */
+  background-color: #1e1c1c; /* Light gray color */
+   /* Space above and below the line */
+  border: none; /* Remove default border if any */
+}
+
+.marital-status-box.selected {
+  background-color: #4CAF50; /* Green background for selected box */
+  border-color: #4CAF50;     /* Green border for selected box */
+  color: white;              /* White text when selected */
+}
+
+
+
